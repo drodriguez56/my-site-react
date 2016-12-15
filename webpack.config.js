@@ -20,6 +20,19 @@ module.exports = {
       test: /\.js$/,
       loaders: ['react-hot', 'babel'],
       include: path.join(__dirname, 'src')
+    },
+    {
+      test: /\.css$/, loader: 'style!css?modules'
     }]
+  },
+  resolveLoader: {
+    root: [
+      path.join(__dirname, 'node_modules'),
+    ],
+  },
+  resolve: {
+    root: [
+      path.join(__dirname, 'node_modules'),
+    ],
   }
 };
