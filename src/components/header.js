@@ -25,9 +25,12 @@ export default class Header extends Component {
           </div>
         <div className={styles.navLeft}>
         </div>
-        <Motion defaultStyle={{ y: open ? -100 : 0 }} style={{y: open ? spring(0): spring(-100)}}>
-          {value => 
-            <div className={styles.mainMenu} style={open ? {'top':`${value.y}%`} : {}}>
+        <Motion style={{x: spring(open ? 100 : 0)}}>
+          {({x}) => 
+            <div className={styles.mainMenu} style={{
+                    WebkitTransform: `translate3d(0, ${x}%, 0)`,
+                    transform: `translate3d(0, ${x}%, 0)`,
+                  }}>
               <NavMenu />
             </div>}
         </Motion>
