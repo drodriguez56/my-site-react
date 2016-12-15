@@ -1,0 +1,67 @@
+.navLeft {
+  background-color: black;
+  color: white;
+  margin: none;
+  right: 0;
+  position: fixed;
+  width: 50px;
+  text-align: center;
+  height: 100%;
+}
+
+.mainMenu {
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  top: -100%;
+  left: 0;
+}
+.menuUl {
+  color: white;
+}
+
+.closeX {
+  width: 25px;
+  height: 25px;
+  padding: 0; 
+  margin: 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.line1, .line2 {
+  top: 50px;
+  width: 20px;
+  height: 10px;
+  right: 15px;
+  position: absolute;
+}
+.line2 {
+  border-top: 3px solid white;
+}
+.line1{
+  border-bottom: 3px solid white;
+}
+/*
+.line1 {
+  width: 35px;
+  height: 35px;
+  border-bottom: 4px solid white;
+  -webkit-transform:
+      translateY(0px)
+      translateX(25px)
+      rotate(45deg); 
+  position: absolute;
+}
+.line2 {
+  width: 35px;
+  height: 35px;
+  border-bottom: 4px solid white;
+  -webkit-transform:
+      translateY(0px)
+      translateX(0px)
+      rotate(-45deg);
+  position: absolute;
+}*/
