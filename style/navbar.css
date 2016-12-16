@@ -1,5 +1,10 @@
+.header {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
 .navLeft {
-  background-color: black;
+  background-color: #404040;
   color: white;
   margin: none;
   right: 0;
@@ -7,60 +12,104 @@
   width: 50px;
   text-align: center;
   height: 100%;
+  top:0;
 }
 
 .mainMenu {
   position: fixed;
-  background-color: black;
+  top: 0;
+  background-color: #404040;
   height: 100%;
-  width: 100%;
-  top: -100%;
-  left: 0;
+  width: 300px;
+  right: -300px;
+  z-index: -1;
 }
 .infoMenu {
   position: fixed;
-  background-color: red;
+  top: 0;
+  background-color: #404040;
   height: 100%;
   width: 100%;
   right: -100%;
 }
 
 .closeX {
+  top: 50px;
   width: 25px;
   height: 25px;
-  padding: 0; 
+  padding: 5px; 
   margin: 0;
-  position: absolute;
-  right: 0;
-  z-index: 1;
+  position: fixed;
+  right: 13px;
+  z-index: 2;
   cursor: pointer;
 }
-.line1, .line2 {
-  top: 50px;
-  width: 20px;
+.line1, .line2, .line3, .line1Active, .line2Active, .line3Active {
+  width: 15px;
   height: 10px;
-  right: 15px;
   position: absolute;
+  border-radius: 12%;
+  /* Firefox */
+  -moz-transition: all 0.3s ease;
+  /* WebKit */
+  -webkit-transition: all 0.3s ease;
+  /* Opera */
+  -o-transition: all 0.3s ease;
+  /* Standard */
+  transition: all 0.3s ease;
 }
-.line2 {
+.line1, .line1Active{
   border-top: 3px solid white;
 }
-.line1{
+.line2{
+  width: 10px;
+  border-bottom: 3px solid white;
+}
+.line2Active{
+  opacity: 0;
+}
+.line3, .line3Active{
+  top:12px;
   border-bottom: 3px solid white;
 }
 
 .info{
-  z-index: 1;
+  z-index: 2;
   color: white;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 100px;
-  right: 10px;
+  right: 5px;
+  padding: 5px;
   height: auto;
   -ms-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
-} 
+}
+
+.closeX:hover .line1:first-child{
+  -ms-transform: translate(0, -1px); /* IE 9 */
+  -webkit-transform: translate(0, -1px); /* Safari */
+  transform: translate(0, -1px);
+}
+.closeX:hover:first-child .line3{
+  -ms-transform: translate(0, 1px); /* IE 9 */
+  -webkit-transform: translate(0, 1px); /* Safari */
+  transform: translate(0, 1px);
+
+}
+
+.closeX:active .line1:first-child , .line1Active{
+  -ms-transform: translate(0, 6px) rotate(45deg); /* IE 9 */
+  -webkit-transform: translate(0, 6px) rotate(45deg); /* Safari */
+  transform: translate(0, 6px) rotate(45deg);
+}
+.closeX:active .line3:first-child , .line3Active{
+  -ms-transform: translate(0, -6px) rotate(-45deg); /* IE 9 */
+  -webkit-transform: translate(0, -6px) rotate(-45deg); /* Safari */
+  transform: translate(0, -6px) rotate(-45deg);
+}
+
 
 .navMainMenu{
   width: 100%;
@@ -75,9 +124,33 @@
 .menuUl li a{
   color: white;
 }
+.linkedIn {
+  color: lightgrey;
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+}
+.github {
+  color: lightgrey;
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+}
+.angelList {
+  color: lightgrey;
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+}
 
-@media screen and (max-width: 1700px) {
-    .navLeft {
-        background-color: lightgreen;
-    }
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  
+  .mainMenu {
+    width: 100%;
+    right: -100%;
+  }
 }
