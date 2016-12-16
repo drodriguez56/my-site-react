@@ -10,15 +10,19 @@
 }
 
 .mainMenu {
-  position: absolute;
+  position: fixed;
   background-color: black;
   height: 100%;
   width: 100%;
   top: -100%;
   left: 0;
 }
-.menuUl {
-  color: white;
+.infoMenu {
+  position: fixed;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  right: -100%;
 }
 
 .closeX {
@@ -44,24 +48,36 @@
 .line1{
   border-bottom: 3px solid white;
 }
-/*
-.line1 {
-  width: 35px;
-  height: 35px;
-  border-bottom: 4px solid white;
-  -webkit-transform:
-      translateY(0px)
-      translateX(25px)
-      rotate(45deg); 
+
+.info{
+  z-index: 1;
+  color: white;
+  cursor: pointer;
   position: absolute;
+  top: 100px;
+  right: 10px;
+  height: auto;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+} 
+
+.navMainMenu{
+  width: 100%;
+  top: 50%;
+  position: relative;
+  text-align: center;
 }
-.line2 {
-  width: 35px;
-  height: 35px;
-  border-bottom: 4px solid white;
-  -webkit-transform:
-      translateY(0px)
-      translateX(0px)
-      rotate(-45deg);
-  position: absolute;
-}*/
+.menuUl {
+  list-style-type: none;
+  color: white;
+}
+.menuUl li a{
+  color: white;
+}
+
+@media screen and (max-width: 1700px) {
+    .navLeft {
+        background-color: lightgreen;
+    }
+}
