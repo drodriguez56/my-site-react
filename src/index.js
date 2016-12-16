@@ -1,15 +1,16 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import App from './components/app';
 import About from './components/about';
 import Projects from './components/projects';
+import Landing from './components/Landing';
 
 render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
-      <Route path='/about' component={About}/>
+      <IndexRoute component={Landing} />
       <Route path='/projects' component={Projects}/>
     </Route>
 
