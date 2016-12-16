@@ -87,7 +87,7 @@
   transform: rotate(90deg);
 }
 
-.closeX:hover .line1:first-child{
+.closeX:hover:first-child .line1{
   -ms-transform: translate(0, -1px); /* IE 9 */
   -webkit-transform: translate(0, -1px); /* Safari */
   transform: translate(0, -1px);
@@ -99,12 +99,12 @@
 
 }
 
-.closeX:active .line1:first-child , .line1Active{
+.line1Active{
   -ms-transform: translate(0, 6px) rotate(45deg); /* IE 9 */
   -webkit-transform: translate(0, 6px) rotate(45deg); /* Safari */
   transform: translate(0, 6px) rotate(45deg);
 }
-.closeX:active .line3:first-child , .line3Active{
+.line3Active{
   -ms-transform: translate(0, -6px) rotate(-45deg); /* IE 9 */
   -webkit-transform: translate(0, -6px) rotate(-45deg); /* Safari */
   transform: translate(0, -6px) rotate(-45deg);
