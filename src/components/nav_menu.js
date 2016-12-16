@@ -1,13 +1,14 @@
 import React from 'react';
-import styles from '../../style/navbar.css'
+import styles from '../../style/navbar.css';
+import { Link } from 'react-router';
 
-export default () =>{
+export default (props) =>{
+  console.log(props)
   return(
-      <div>
+      <div className={styles.navMainMenu}>
         <ul className={styles.menuUl}>
-          <li>About Me</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li><Link onClick={props.toggleMenu} to='/about'>About Me</Link></li>
+          <li><Link onClick={props.toggleMenu} to='/projects'>Projects</Link></li>
         </ul>
       </div>
     );
