@@ -10,10 +10,24 @@ export default class About extends Component{
   return (
       <div className={styles.about}> 
         {
-        !this.props.doneOpen ? (<div>LOADING ....</div>) : 
-        (<div>
+        !this.props.doneOpen ? (
+          //LOADER IN CSS
+          <div className={styles.loader}>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          ) : 
+        (
+        <div>
           Content here
-        </div>)
+        </div>
+        )
         }
       </div>
     );
