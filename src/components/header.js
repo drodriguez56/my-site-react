@@ -22,16 +22,22 @@ export default class Header extends Component {
   }
   toggleInfo = () => {
     this.setState({ infoOpen: !this.state.infoOpen, mainMenuOpen: false })
+    setTimeout(()=>{ 
+      console.log(this.state)
+      this.setState({doneOpen: !this.state.doneOpen}) 
+    }, 1000);
   }
 
   handleEndAnimationInfo = () =>{
+
+    // NEED CHANGING
     this.setState({ doneOpen: !this.state.doneOpen })
   }
 
   renderMotion = (menu) =>{
 
     return (
-      <Motion onRest={menu.type == 'info' ? this.handleEndAnimationInfo : () => {}} style={{y: spring(menu.open ? menu.springVal : 0)}}>
+      <Motion style={{y: spring(menu.open ? menu.springVal : 0)}}>
         {({y}) => 
           <div className={menu.type == 'main' ? styles.mainMenu : styles.infoMenu} style={{
                   WebkitTransform: `translate3d(${y}${menu.translate3d},0 , 0)`,
