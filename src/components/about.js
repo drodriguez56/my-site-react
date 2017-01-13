@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import styles from '../../style/about.css';
+import Loader from './loader'
 
 export default class About extends Component{
   componentDidUpdate(){
@@ -12,20 +13,12 @@ export default class About extends Component{
         {
         !this.props.doneOpen ? (
           //LOADER IN CSS
-          <div className={styles.loader}>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+          <Loader />
           ) : 
         (
         <div>
-          Content here
+          <p>Daniel Rodriguez is an engineer Full Stack developer with experience in a variety of languages and frameworks.</p>
+
         </div>
         )
         }

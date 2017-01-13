@@ -4,7 +4,6 @@ import { Motion, spring } from 'react-motion';
 import NavMainMenu from './nav_menu';
 import About from './about';
 import FontAwesome from 'react-fontawesome';
-import { Link } from 'react-router';
 
 export default class Header extends Component {
   constructor(props){
@@ -18,12 +17,11 @@ export default class Header extends Component {
     this.setState({mobile: check});
   }
   toggleMenu = () => {
-    this.setState({ mainMenuOpen: !this.state.mainMenuOpen, infoOpen: false })
+    this.setState({ mainMenuOpen: !this.state.mainMenuOpen, infoOpen: false, doneOpen: false })
   }
   toggleInfo = () => {
     this.setState({ infoOpen: !this.state.infoOpen, mainMenuOpen: false })
     setTimeout(()=>{ 
-      console.log(this.state)
       this.setState({doneOpen: !this.state.doneOpen}) 
     }, 1000);
   }
@@ -58,13 +56,13 @@ export default class Header extends Component {
             <div className={mainMenuOpen ? styles.line2Active : styles.line2}></div>
             <div className={mainMenuOpen ? styles.line3Active : styles.line3}></div>
           </div>
-          <div onClick={this.toggleInfo} className={styles.info}>info</div>
+          <div onClick={this.toggleInfo} className={styles.info}><b>info</b></div>
         <div className={styles.navLeft}>
         </div>
         <a href='https://www.linkedin.com/in/drodriguez56' target="blanck"><FontAwesome className={styles.linkedIn} name='linkedin' /></a>
         <a href='https://angel.co/drodriguez56' target="blanck"><FontAwesome className={styles.angelList} name='angellist' /></a>
         <a href='https://github.com/drodriguez56' target="blanck"><FontAwesome className={styles.github} name='github' /></a>
-        {this.renderMotion({type: 'main', springVal: !this.state.mobile ? -300 : -100, open: this.state.mainMenuOpen, translate3d: !this.state.mobile ? 'px' : '%' })}
+        {this.renderMotion({type: 'main', springVal: !this.state.mobile ? -400 : -100, open: this.state.mainMenuOpen, translate3d: !this.state.mobile ? 'px' : '%' })}
         {this.renderMotion({type: 'info', springVal: -100, open: this.state.infoOpen, translate3d: '%' })}
       </div> 
       );
