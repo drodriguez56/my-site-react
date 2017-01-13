@@ -1,10 +1,9 @@
 .header {
   height: 100%;
-  width: 100%;
   position: fixed;
 }
 .navLeft {
-  background-color: #404040;
+  background-color: #1a1a1a;
   color: white;
   margin: none;
   right: 0;
@@ -18,16 +17,16 @@
 .mainMenu {
   position: fixed;
   top: 0;
-  background-color: #404040;
+  background-color: #1a1a1a;
   height: 100%;
-  width: 300px;
-  right: -300px;
+  width: 400px;
+  right: -400px;
   z-index: -1;
 }
 .infoMenu {
   position: fixed;
   top: 0;
-  background-color: #404040;
+  background-color: #1a1a1a;
   height: 100%;
   width: 100%;
   right: -100%;
@@ -43,6 +42,7 @@
   right: 13px;
   z-index: 2;
   cursor: pointer;
+  border: none;
 }
 .line1, .line2, .line3, .line1Active, .line2Active, .line3Active {
   width: 15px;
@@ -109,20 +109,35 @@
   -webkit-transform: translate(0, -6px) rotate(-45deg); /* Safari */
   transform: translate(0, -6px) rotate(-45deg);
 }
-
-
 .navMainMenu{
-  width: 100%;
-  top: 50%;
-  position: relative;
-  text-align: center;
+  height: 100% ;
+  overflow: scroll;
 }
 .menuUl {
   list-style-type: none;
-  color: white;
+  color: black;
+  padding: 0;
+  margin: 0;
 }
-.menuUl li a{
-  color: white;
+.menuUl a{
+  color: black;
+}
+.menuUl li {
+  background-color: white;
+  height: 165px;
+  border-bottom: 0.5px solid lightgrey;
+  position: relative;
+}
+.menuUl li:hover:first-child .projectImage{
+  transform: scale(1.1);
+  /* Firefox */
+  -moz-transition: all 0.3s ease;
+  /* WebKit */
+  -webkit-transition: all 0.3s ease;
+  /* Opera */
+  -o-transition: all 0.3s ease;
+  /* Standard */
+  transition: all 0.3s ease;
 }
 .linkedIn {
   color: lightgrey;
@@ -142,6 +157,40 @@
   right: 20px;
   bottom: 70px;
 }
+.projectImage{
+  height: 110px;
+  width: 90px;
+  background-color: lightgray;
+  position: absolute;
+  display: inline-block;
+  margin: 25px;
+  right: 70px;
+}
+.projectImage img{
+  width: 100%;
+  position: relative;
+}
+
+.details{
+  display: inline-block;
+  padding: 25px;
+  padding-right: 0;
+  width: 200px;
+  font-size: 12px;
+}
+.number{
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+}
+.innerDetail{
+  display: inline-block;
+  padding-left: 50px;
+}
+.innerDetail p {
+  font-weight: 700;
+}
+/*MEDIA QUERIES*/
 
 @media only screen 
   and (min-device-width: 414px) 
