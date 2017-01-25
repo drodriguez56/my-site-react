@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from '../../style/navbar.css';
 import { Motion, spring } from 'react-motion';
+import { Link } from 'react-router';
 import NavMainMenu from './nav_menu';
 import About from './about';
 import FontAwesome from 'react-fontawesome';
@@ -46,6 +47,7 @@ export default class Header extends Component {
   const { mainMenuOpen, infoOpen } = this.state;
     return (
       <div className={styles.header}>
+          <Link to='/'><img className={styles.img} src='https://s3.amazonaws.com/www.danielrodriguez.io/vendor/img/logo-personal.png'/> </Link>
           <div className={styles.closeX} onClick={this.toggleMenu} >
             <div className={mainMenuOpen ? styles.line1Active : styles.line1}></div>
             <div className={mainMenuOpen ? styles.line2Active : styles.line2}></div>
