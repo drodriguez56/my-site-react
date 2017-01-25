@@ -32,9 +32,17 @@
   width: 100%;
   right: -100%;
 }
+.img{
+  position: fixed;
+  top: 20px;
+  background-color: #1a1a1a;
+  height: 30px;
+  right: 10px;
+  z-index: 3
+}
 
 .closeX {
-  top: 50px;
+  top: 70px;
   width: 25px;
   height: 25px;
   padding: 5px; 
@@ -44,12 +52,12 @@
   z-index: 2;
   cursor: pointer;
   border: none;
+  background: #1a1a1a;
 }
 .line1, .line2, .line3, .line1Active, .line2Active, .line3Active {
   width: 15px;
   height: 10px;
   position: absolute;
-  border-radius: 12%;
   /* Firefox */
   -moz-transition: all 0.3s ease;
   /* WebKit */
@@ -79,7 +87,7 @@
   color: white;
   cursor: pointer;
   position: fixed;
-  top: 100px;
+  top: 130px;
   right: 5px;
   padding: 5px;
   height: auto;
