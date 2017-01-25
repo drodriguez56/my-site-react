@@ -11,7 +11,7 @@ render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={Landing} />
-      <Route path='/projects' component={Projects}/>
+      <Route path='/projects/:id' component={Projects}/>
     </Route>
 
   </Router>
