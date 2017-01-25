@@ -12,7 +12,7 @@ export default class NavMainMenu extends Component{
 
   renderProjects = (project)  =>{
     return (
-        <a key={project.id} href={`/projects?p=${project.id}`}>
+        <a key={project.id} href={`/projects/${project.id}`}>
           <li>
             <div className={styles.details}>
               <div className={styles.number}>{`${project.id < 10 ? `0${project.id}` : project.id}`}</div>
