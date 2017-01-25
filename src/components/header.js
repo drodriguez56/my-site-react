@@ -17,31 +17,26 @@ export default class Header extends Component {
     this.setState({mobile: check});
   }
   toggleMenu = () => {
-    this.setState({ mainMenuOpen: !this.state.mainMenuOpen, infoOpen: false, doneOpen: false })
+    this.setState({ mainMenuOpen: !this.state.mainMenuOpen, infoOpen: false, doneOpen: false})
   }
   toggleInfo = () => {
-    this.setState({ infoOpen: !this.state.infoOpen, mainMenuOpen: false })
-    setTimeout(()=>{ 
-      this.setState({doneOpen: !this.state.doneOpen}) 
-    }, 1000);
+    this.setState({ infoOpen: !this.state.infoOpen, mainMenuOpen: false, doneOpen: false })
   }
 
   handleEndAnimationInfo = () =>{
-
-    // NEED CHANGING
     this.setState({ doneOpen: !this.state.doneOpen })
   }
 
-  renderMotion = (menu) =>{
+  renderMotion = (menu) =>{ 
 
     return (
-      <Motion style={{y: spring(menu.open ? menu.springVal : 0)}}>
+      <Motion onRest={menu.type =='info' ? this.handleEndAnimationInfo : null} style={{y: spring(menu.open ? menu.springVal : 0)}}>
         {({y}) => 
           <div className={menu.type == 'main' ? styles.mainMenu : styles.infoMenu} style={{
                   WebkitTransform: `translate3d(${y}${menu.translate3d},0 , 0)`,
                   transform: `translate3d(${y}${menu.translate3d},0 , 0)`,
                 }}>
-            {menu.type == 'main' ? <NavMainMenu toggleMenu={this.toggleMenu}/> : <About doneOpen={this.state.doneOpen}/>}
+            {menu.type == 'main' ? <NavMainMenu toggleMenu={this.toggleMenu}/> : <About doneOpen={this.state.doneOpen} />}
           </div>}
       </Motion>
       )
