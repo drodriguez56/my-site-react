@@ -84,11 +84,12 @@
 
 .info{
   z-index: 2;
+  width: 70px;
   color: white;
   cursor: pointer;
   position: fixed;
-  top: 130px;
-  right: 5px;
+  top: 140px;
+  right: -8px;
   padding: 5px;
   height: auto;
   -ms-transform: rotate(90deg);

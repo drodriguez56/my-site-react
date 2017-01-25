@@ -53,7 +53,7 @@ export default class Header extends Component {
             <div className={mainMenuOpen ? styles.line2Active : styles.line2}></div>
             <div className={mainMenuOpen ? styles.line3Active : styles.line3}></div>
           </div>
-          <div onClick={this.toggleInfo} className={styles.info}><b>info</b></div>
+          <div onClick={this.toggleInfo} className={styles.info}>{this.state.infoOpen ? <b>close</b> : <b>info</b>}</div>
         <div className={styles.navLeft}>
         </div>
         <a href='https://www.linkedin.com/in/drodriguez56' target="blanck"><FontAwesome className={styles.linkedIn} name='linkedin' /></a>
