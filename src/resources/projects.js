@@ -4,14 +4,19 @@ export const PROJECTS = [
     name: 'CLUNDA',
     url: '/clunda',
     imageUrl: 'http://angelforum-flensburg.de/gallery/images/gallerySmallPlaceholder.png',
-    skills: ['Co-founder','Startup','Design' ]
+    skills: ['Co-founder','Startup','Design' ],
+    description: 'clunda is a cool app blablabla',
+    video: 'https://www.youtube.com/embed/ZyQrdvt5Ka8',
+    images: []
   },
   {
     id: 2,
     name: 'LOTIFYME',
     url: '/lotifyme',
     imageUrl: 'http://angelforum-flensburg.de/gallery/images/gallerySmallPlaceholder.png',
-    skills: ['Team Lead','RoR','API', 'IOS']
+    skills: ['Team Lead','RoR','API', 'IOS'],
+    images: [1,2,3,4,1,2,3,4,1,2,3,4],
+    description: 'this is the des'
   },
     {
     id: 3,
