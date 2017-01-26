@@ -4,7 +4,9 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
+    //delete here to compile for s3---
     'webpack-hot-middleware/client?http://0.0.0.0:3000',
+    //---
     './src/index'
   ],
   output: {
