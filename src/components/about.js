@@ -48,7 +48,11 @@ export default class About extends Component{
           <div className={styles.page}>
             { sections.map((section, idx) => this.renderSection(section, idx))  } 
             <div className={styles.lastSection}>
-              <p className={styles.content}>Contact</p>
+              <div className={styles.contact}>
+                <h4>Say hi</h4>
+                <a className={styles.a} href="mailto:daniel@danielrodriguez.io">daniel@danielrodriguez.io</a>
+                <p>+1 914 3279353</p>
+              </div>
             </div>
             <div className={styles.box}>
               <img className={styles.image} src={this.state.imageUrl}/> 

@@ -38,6 +38,12 @@
   width: auto;
   max-width: 100%;
 }
+.a{
+  color: white;
+}
+.a:Hover, .a:visited, .a:focus{
+  color: lightgrey;
+}
 @media only screen and (max-width: 736px) and (orientation: landscape)  { 
     .content{
       top: 25%;
