@@ -10,7 +10,7 @@
 .content{
   font-weight: 300; 
   position: relative;
-  top: 50%;
+  top: 45%;
   float: left;
   width: 40%;
   margin-left: 5%;
@@ -29,10 +29,18 @@
   position: fixed;
   height: 90%;
   width: 40%;
-  top: 50px;
+  top: 5%;
   right: 100px; 
+  text-align: center;
 }
 .image{
   height: 100%;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+}
+@media only screen and (max-width: 736px) and (orientation: landscape)  { 
+    .content{
+      top: 25%;
+    }
+
 }

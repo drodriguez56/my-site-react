@@ -1,20 +1,12 @@
 .landing {
   height: 100%;
   width: 100%;
-  background: black;
+  background: white;
   position: absolute;
   z-index: -10;
 }
-.darckBack{
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.4;
-  position: absolute;
-  z-index: -9;
-}
 .homeH1{
-  color: white;
+  color: black;
   font-size: 40px;
   font-weight: 300;
 }
@@ -23,8 +15,26 @@
   width: 100%;
   text-align: center;
   top: 40%;
+  z-index: -1;
 }
-
+.location{
+  display: inline-block;
+  margin-left: 10px;
+}
+.animateDiv{
+  position: relative;
+}
+.img{
+  height: 100px;
+}
+.logoUnderline{
+  border-bottom: 1px solid black;
+  width: 70px;
+  margin: 0 auto;
+  opacity: 0.3;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
 @media only screen and (max-width: 736px) and (orientation: portrait)  { 
     .homeH1{
       font-size: 25px;

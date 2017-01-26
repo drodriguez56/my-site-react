@@ -13,7 +13,14 @@
   height: 100%;
   top:0;
 }
-
+.darckBack{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+  position: fixed;
+  z-index: -1;
+}
 .mainMenu {
   position: fixed;
   top: 0;
@@ -22,7 +29,6 @@
   width: 400px;
   right: -400px;
   z-index: -1;
-  border-left: 1px solid lightgrey;
 }
 .infoMenu {
   position: fixed;
@@ -31,14 +37,6 @@
   height: 100%;
   width: 100%;
   right: -100%;
-}
-.img{
-  position: fixed;
-  top: 20px;
-  background-color: #1a1a1a;
-  height: 30px;
-  right: 8px;
-  z-index: 3
 }
 
 .closeX {
