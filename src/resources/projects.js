@@ -7,7 +7,6 @@ export const PROJECTS = [
     skills: ['Co-founder','Startup','Design' ],
     description: 'clunda is a cool app blablabla',
     video: 'https://www.youtube.com/embed/ZyQrdvt5Ka8',
-    images: []
   },
   {
     id: 2,

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from '../../style/projects.css';
 import { PROJECTS } from '../resources/projects';
+import { Link } from 'react-router';
 
 export default class Project extends Component {
   constructor(props){
@@ -20,6 +21,7 @@ export default class Project extends Component {
       <div>{project.description}</div>
       {project.video ? <iframe className={styles.iframe} src={project.video}></iframe> : null}
       {project.images ? <div className={styles.table}>{project.images.map(this.renderImage)}</div> : null}
+      <div className={styles.backHome}><Link className={styles.backLink} to='/'>Back Home</Link></div>
       </div>
       );
   }
