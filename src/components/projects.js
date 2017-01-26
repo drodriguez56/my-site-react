@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from '../../style/projects.css';
 import { PROJECTS } from '../resources/projects';
 
 export default class Project extends Component {
@@ -6,10 +7,19 @@ export default class Project extends Component {
     super(props);
     this.state = { activePoject: PROJECTS.filter((project)=>{ return project['id'] == this.props.params['id']})[0] }
   }
-  render(){    
+  renderImage = () =>{
+    return <div className={styles.tableImage}>Image</div>
+  }
+  render(){  
+    let project = this.state.activePoject;  
     return (
-      <div>
-      <p>{this.state.activePoject.name}</p>
+      <div className={styles.project}>
+      <div className={styles.mainSection}>
+         <img src={project.imageUrl}/>
+      </div>
+      <div>{project.description}</div>
+      {project.video ? <iframe className={styles.iframe} src={project.video}></iframe> : null}
+      {project.images ? <div className={styles.table}>{project.images.map(this.renderImage)}</div> : null}
       </div>
       );
   }
