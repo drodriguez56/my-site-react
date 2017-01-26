@@ -29,6 +29,8 @@
   width: 400px;
   right: -400px;
   z-index: -1;
+  border-left: 1px solid black;
+  box-shadow: -1px 0px 10px #888888;
 }
 .infoMenu {
   position: fixed;
