@@ -49,7 +49,7 @@ export default class About extends Component{
           <div className={styles.page}>
             { sections.map((section, idx) => this.renderSection(section, idx))  } 
             <div className={styles.lastSection}>
-              <p className={styles.content}>section 3</p>
+              <p className={styles.content}>Contact</p>
             </div>
             <div className={styles.box}>
               <img className={styles.image} src={this.state.imageUrl}/> 
