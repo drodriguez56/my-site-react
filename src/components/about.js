@@ -9,7 +9,6 @@ import { SECTIONS } from '../resources/infoSections';
 export default class About extends Component{
   constructor(props){
     super(props);
-    console.log(SECTIONS)
     this.state = {imageUrl: SECTIONS[0].imageUrl , sectionIdx: 0, sections: SECTIONS }
   }
   componentDidUpdate(){
