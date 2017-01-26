@@ -10,7 +10,7 @@ export default class Header extends Component {
   constructor(props){
     super(props);
 
-    this.state = { mainMenuOpen: false, infoOpen: false, doneOpen: false, mobile: false }
+    this.state = { mainMenuOpen: false, infoOpen: false, doneOpen: false, mobile: false };
   }
   componentWillMount(){
     let check = false;
@@ -18,14 +18,17 @@ export default class Header extends Component {
     this.setState({mobile: check});
   }
   toggleMenu = () => {
-    this.setState({ mainMenuOpen: !this.state.mainMenuOpen, infoOpen: false, doneOpen: false})
+    this.setState({ mainMenuOpen: !this.state.mainMenuOpen, infoOpen: false, doneOpen: false});
   }
   toggleInfo = () => {
-    this.setState({ infoOpen: !this.state.infoOpen, mainMenuOpen: false, doneOpen: false })
+    this.setState({ infoOpen: !this.state.infoOpen, mainMenuOpen: false, doneOpen: false });
   }
 
   handleEndAnimationInfo = () =>{
-    this.setState({ doneOpen: !this.state.doneOpen })
+    this.setState({ doneOpen: !this.state.doneOpen });
+  }
+  handleCloseAll = () =>{
+    this.setState({ infoOpen: false, mainMenuOpen: false });
   }
 
   renderMotion = (menu) =>{ 
@@ -47,7 +50,7 @@ export default class Header extends Component {
   const { mainMenuOpen, infoOpen } = this.state;
     return (
       <div className={styles.header}>
-          <Link to='/'><img className={styles.img} src='https://s3.amazonaws.com/www.danielrodriguez.io/vendor/img/logo-personal.png'/> </Link>
+          {this.state.infoOpen || this.state.mainMenuOpen ? <div className={styles.darckBack} onClick={this.handleCloseAll}></div> : null}          
           <div className={styles.closeX} onClick={this.toggleMenu} >
             <div className={mainMenuOpen ? styles.line1Active : styles.line1}></div>
             <div className={mainMenuOpen ? styles.line2Active : styles.line2}></div>
