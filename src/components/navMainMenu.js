@@ -9,23 +9,22 @@ export default class NavMainMenu extends Component{
 
     this.state ={ projects: PROJECTS }
   }
-
   renderProjects = (project)  =>{
     return (
-        <a key={project.id} href={`/projects/${project.id}`}>
+        <Link onClick={() => this.props.handleCloseAll()} to={`/projects/${project.id}`} key={project.id}>
           <li>
             <div className={styles.details}>
               <div className={styles.number}>{`${project.id < 10 ? `0${project.id}` : project.id}`}</div>
               <div className={styles.innerDetail}>
                 <p>{project.name}</p>
-                {project.skills.map((skill, idx) => {return <div key={idx + skill}>{skill}</div>})}
+                {project.skills.map((skill, idx) => {return <div key={Math.random(500)}>{skill}</div>})}
               </div>
             </div>
             <div className={styles.projectImage}>
               <img src={project.menuImageUrl}/>
             </div>
           </li>
-        </a>
+        </Link>
       );
   }
   render(){
