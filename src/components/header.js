@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styles from '../../style/navbar.css';
 import { Motion, spring } from 'react-motion';
 import { Link } from 'react-router';
-import NavMainMenu from './nav_menu';
+import NavMainMenu from './navMainMenu';
 import About from './about';
 import FontAwesome from 'react-fontawesome';
 
@@ -40,7 +40,7 @@ export default class Header extends Component {
                   WebkitTransform: `translate3d(${y}${menu.translate3d},0 , 0)`,
                   transform: `translate3d(${y}${menu.translate3d},0 , 0)`,
                 }}>
-            {menu.type == 'main' ? <NavMainMenu toggleMenu={this.toggleMenu}/> : <About doneOpen={this.state.doneOpen} />}
+            {menu.type == 'main' ? <NavMainMenu handleCloseAll={this.handleCloseAll}toggleMenu={this.toggleMenu}/> : <About doneOpen={this.state.doneOpen} />}
           </div>}
       </Motion>
       )
