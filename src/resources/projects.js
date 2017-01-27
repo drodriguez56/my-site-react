@@ -3,7 +3,7 @@ export const PROJECTS = [
     id: 1,
     name: 'CLUNDA',
     url: '/clunda',
-    imageUrl: 'http://angelforum-flensburg.de/gallery/images/gallerySmallPlaceholder.png',
+    menuImageUrl: 'https://s3.amazonaws.com/www.danielrodriguez.io/images/ClundaWhite.png',
     skills: ['Co-founder','Startup','Design' ],
     description: 'clunda is a cool app blablabla',
     video: 'https://www.youtube.com/embed/ZyQrdvt5Ka8',
@@ -12,7 +12,7 @@ export const PROJECTS = [
     id: 2,
     name: 'LOTIFYME',
     url: '/lotifyme',
-    imageUrl: 'http://angelforum-flensburg.de/gallery/images/gallerySmallPlaceholder.png',
+    menuImageUrl: 'https://s3.amazonaws.com/www.danielrodriguez.io/images/lotifyme.png',
     skills: ['Team Lead','RoR','API', 'IOS'],
     images: [1,2,3,4,1,2,3,4,1,2,3,4],
     description: 'this is the des'
@@ -21,28 +21,21 @@ export const PROJECTS = [
     id: 3,
     name: 'PLATEANDO',
     url: '/plateando',
-    imageUrl: 'http://angelforum-flensburg.de/gallery/images/gallerySmallPlaceholder.png',
+    menuImageUrl: 'https://s3.amazonaws.com/www.danielrodriguez.io/images/plateando.png',
     skills: ['SpreeCommerce','Project', 'Lead']
   },
   {
     id: 4,
     name: 'MRDESCUENTO',
     url: '/lotifyme',
-    imageUrl: 'http://angelforum-flensburg.de/gallery/images/gallerySmallPlaceholder.png',
+    menuImageUrl: 'https://s3.amazonaws.com/www.danielrodriguez.io/images/mrdescuento.png',
     skills: ['Co-founder','Startup']
   },
     {
     id: 5,
-    name: 'EFUNDEX',
-    url: '/clunda',
-    imageUrl: 'http://angelforum-flensburg.de/gallery/images/gallerySmallPlaceholder.png',
-    skills: ['Wordpress','javascript', 'Manager']
-  },
-    {
-    id: 6,
     name: 'SNIMPORT',
     url: '/clunda',
-    imageUrl: 'http://angelforum-flensburg.de/gallery/images/gallerySmallPlaceholder.png',
+    menuImageUrl: 'https://s3.amazonaws.com/www.danielrodriguez.io/images/snimport.png',
     skills: ['React.js','SpreeCommerce']
   }
 ];

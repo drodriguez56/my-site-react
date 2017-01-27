@@ -22,7 +22,7 @@ export default class NavMainMenu extends Component{
               </div>
             </div>
             <div className={styles.projectImage}>
-              <img src={project.imageUrl}/>
+              <img src={project.menuImageUrl}/>
             </div>
           </li>
         </a>
