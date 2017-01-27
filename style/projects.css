@@ -1,9 +1,6 @@
-.project{
-  height: 100%;
-}
 .iframe{
   width: 100%;
-  height: 72%;
+  min-height: 700px;
   border: none;
 }
 .mainSection{
@@ -24,13 +21,11 @@
   height: auto;
 }
 .backHome{
+  width: 100%;
   text-align: center;
-  height: 100px;
-  position: relative;
-  z-index: -1;
+  margin-top: 50px;
 }
 .backLink{
-  position: relative;
   top: 50px;
   padding: 50px;
 }
